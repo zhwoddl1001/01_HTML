@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div와 span 이미지 활용하기</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">div 와 span 이미지 활용하기</h1>
+    <!--
+    금일 숙제 배경색 lightgreen       lightcoral
+
+    -->
+    <div style="border: 2px solid; width: 1200; height: 300; display: flex">
+      <img src="flower1.jpg" alt="꽃1" width="20%" height="100%" />
+      <img src="flower2.jpg" alt="꽃2" width="20%" height="100%" />
+      <img src="flower3.jpg" alt="꽃3" width="20%" height="100%" />
+      <img src="flower4.jpg" alt="꽃4" width="20%" height="100%" />
+      <img src="flower5.jpg" alt="꽃5" width="20%" height="100%" />
+    </div>
+
+    <!--
+    div 한 줄 전체를 차지하기 때문에 /div 로 태그를 닫아주면 자동으로 줄바꿈 처리가 됨
+    -->
+
+    <h3>div와 span비교하기</h3>
+
+    <div style="background-color: lightgreen">첫 번째 div 구역</div>
+
+    <div style="background-color: lightgreen">두 번째 div 구역</div>
+
+    <span style="background-color: lightcoral">첫 번째 span구역</span>
+    <!--
+      띄어쓰기 모양이 보이지 않을 때
+      &nbsp; 작성해주면 띄어쓰기 모양이 작성됨 띄어쓰기와 다르게 하나의 공백 글자로 처리되는 표시이기 때문에
+      &nbsp;를 여러번 작성할 경우 띄어쓰기가 여러번 작성된 것처럼 보여짐
+    -->
+    &nbsp;
+    <span style="background-color: lightcoral">두 번째 span구역</span>
+  </body>
+</html>

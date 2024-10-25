@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>치킨 주문하기</title>
+    <style>
+      img {
+        width: 20%;
+      }
+      div {
+        border: solid 1px black;
+        border-collapse: collapse;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>치킨 주문하기</h1>
+      <img src="main-image.jpg" alt="치킨" />
+      <br />
+      <label>치킨종류:</label>
+      <br />
+      <input type="radio" name="치킨종류" />후라이드
+      <br />
+      <input type="radio" name="치킨종류" />양념 치킨
+      <br />
+      <input type="radio" name="치킨종류" />간장 치킨 <br /><br />
+      <label>소스 추가(중복 선택 가능):</label>
+      <br />
+      <input type="checkbox" name="소스 추가" /> 치즈 소스
+      <br />
+      <input type="checkbox" name="소스 추가" /> 갈릭 소스
+      <br />
+      <input type="checkbox" name="소스 추가" /> 매운 소스
+      <br />
+      <label>치킨 수량:</label>
+      <input type="text" placeholder="수량 입력" />
+      <br /><br />
+      <label>전화번호:</label>
+      <input type="tel" placeholder="예:010-1234-5678" />
+      <br /><br />
+      <label>추가요청사항:</label>
+      <br />
+      <input type="text" placeholder="추가요청사항입력" />
+      <br /><br />
+      <input type="submit" value="주문하기" />
+      <br /><br />
+      <!--submit 자리에 button 쓰면 어떻게 되나요?-->
+    </div>
+  </body>
+</html>
