@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>물품 납품 제출 품</title>
+  </head>
+  <body>
+    <h1>물품 납품 제출 폼</h1>
+    <fieldset>
+      <legend>납품자 정보</legend>
+      <label>1. 납품자명 :</label>
+      <input type="text" name="name" />
+      <br /><br />
+      <label>2. 이메일 :</label>
+      <input type="email" name="email" placeholder="answer@naver.com" />
+      <br /><br />
+      <label>3. 홈페이지 :</label>
+      <input type="text" name="homepage" value="http://" />
+      <br /><br />
+      <label>4.지역 :</label>
+      <select name="location">
+        <option>서울</option>
+        <option>부산</option>
+        <option>대구</option>
+        <option>인천</option>
+        <option>광주</option>
+        <!--옵션태그에서 특정 옵션을 설정하길 원한다면 selected 속성 작성-->
+        <option selected>경기도</option>
+        <option>강원도</option>
+      </select>
+    </fieldset>
+
+    <!--납품 정보는 12_주말과제1번결과.html전달-->
+
+    <form action="12_주말과제1결과.html">
+      <fieldset>
+        <legend>납품정보</legend>
+        <label>삼풍명 :</label>
+        <input type="text" name="productName" />
+        <br /><br />
+        <label>납품수량</label>
+        <input type="number" name="amount" placeholder="최소100개" min="100" />
+        <br /><br />
+        <label>납품등급 :</label>
+        <input type="range" name="grade" min="1" max="5" />
+        <br /><br />
+        <label>기타사항 :</label>
+        <textarea name="etc" rows="5" cols="20"></textarea>
+        <br /><br />
+        <label>설명을 위한 텍스트</label>
+        <input type="text" name="textText" />
+        <br /><br />
+        <button>전송하기</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
