@@ -26,17 +26,23 @@
         <h3>이메일:<span id="email-result"></span></h3>
       </div>
       <script>
+         
         const A군 = new URL(location.href).searchParams;
+
+
+         // html id에 작성한 글자와 javascript로 작성한 글자에서
+      // 동일한 의미를 가진 글자끼리 연결하기
+
         const nameResult = document.getElementById("name-result");
         const idResult = document.getElementById("id-result");
         const pwResult = document.getElementById("pw-result");
         const emailResult = document.getElementById("email-result");
 
         //innerText를 이용해서 전달받은 데이터를 집어넣기
-        nameResult.innerText = A군.get(name - result);
-        idResult.innerText = A군.get(id - result);
-        pwResult.innerText = A군.GET(pw - result);
-        emailResult.innerText = A군.get(email - result);
+        nameResult.innerText = A군.get("user-name");
+        idResult.innerText = A군.get("user-id");
+        pwResult.innerText = A군.GET("user-pwt");
+        emailResult.innerText = A군.get("user-email");
 
 
 
