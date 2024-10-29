@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과</title>
+    <style>
+      h1 {
+        color: tomato;
+      }
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>맛있어 치킨가게 회원가입 완료</h1>
+      <h3>이름:<span id="name-Result"></span></h3>
+      <h3>아이디:<span id="id-Result"></span></h3>
+      <h3>비밀번호:<span id="pw-Result"></span></h3>
+      <h3>이메일:<span id="email-Result"></span></h3>
+      <h3>좋아하는치킨:<span id="chicken-Result"></span></h3>
+    </div>
+    <script>
+      const A군 = new URL(location.href).searchParams;
+
+      const nameResult = document.getElementById("name-Result");
+      const idResult = document.getElementById("id-Result");
+      const pwResult = document.getElementById("pw-Result");
+      const emailResult = document.getElementById("email-Result");
+      const chickenResult = document.getElementById("chicken-Result");
+
+      nameResult.innerText = A군.get("user-name");
+      idResult.innerText = A군.get("user-id");
+      pwResult.innerText = A군.get("user-pw");
+      emailResult.innerText = A군.get("user-email");
+      chickenResult.innerText = A군.get("favorite-chicken");
+    </script>
+  </body>
+</html>
