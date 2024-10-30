@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 스타일2</title>
+    <link rel="stylesheet" href="../css/05_레이아웃스타일2.css" />
+  </head>
+  <body>
+    <h1>요소의 영역(여백) 관련 스타일</h1>
+    <pre>
+        HTML 요소는 총 4가지의 영역으로 구성되어 있음
+        요소 = 태그
+        태그 = <>를 사용해서 알파벳을 열고 닫은 형식
+        요소(element) = <p>안녕하세요.</p> <>를 사용해서 알파벳을 열고 닫는 형식+ 태그안에 작성된 안녕하세요
+        라는 내용까지 포함한다는 의미
+
+        1.content(내용)의 영역
+        - 요소의 내용이 작성 되어지는 영역 (시작태그와 종료태그 사이에 작성되는 내용을 생각하면 됨)
+
+        2.padding
+         -content와 border 사이의 공간
+
+         3. border(테두리) 영역
+         - 요소의 테구리가 지정되는 영역
+         - content 보다 바깥쪽에서 content를 감싸고 있음
+
+         4.margin(여백, 간격)
+         - 다른 요소와의 간격을 나타내는 영역
+    </pre>
+
+    <h4>padding, margin 크기를 한 번에 지정하기</h4>
+
+    <div class="A">공간1번</div>
+    <div class="B">공간2번</div>
+    <div class="C">공간3번</div>
+    <div class="D">공간4번</div>
+
+    <h6>가장 많이 사용하는 방법은 A와 B</h6>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+
+    <h3>padding, margin, border의 방향성</h3>
+    <pre>
+        상 우 하 좌 를 익히지 못하겠을 때 사용하는 또 다른 방법
+        떠는 우나 좌 하 에다가 특정 크기값을 주고 싶을 때 사용
+        (ㅁㅁㅁ == padding, margin, border를 나타냄)
+
+        ㅁㅁㅁ=top : 크기 → 위쪽 방향 크기 지정
+        ㅁㅁㅁ=bottom : 크기 → 아래쪽 방향 크기 지정
+        ㅁㅁㅁ=left : 크기 → 왼쪽 방향 크기 지정
+        ㅁㅁㅁ=right : 크기 → 오른쪽 방향 크기 지정
+
+        단, border의 속성 값은[크기 모양 색상] 형식으로 작성
+
+    </pre>
+
+    <h4>예제 활용하기</h4>
+
+    <div class="B">
+      <div class="box"></div>
+    </div>
+    <h3>margin : auto;</h3>
+    <pre>
+      -다른 요소와의 간격을 자동으로 지정해서 가운데 정렬하게 만드는 속성 값
+
+      - 기본적으로 좌우 간격만 자동으로 지정
+      - 지정되는 대상은block 형식의 요소여야함
+      inline, inline-block 은 text-align:center; 이용
+      
+      text-align:center;
+      1. inline       태그 : span, a, strong, em, img 등
+      2. inline-block 태그 : button,  input,  img 등
+      
+      margin:auto;
+      1.block         태그 : div, h1~h6, p, ul, ol, li, section 등
+      
+
+    </pre>
+  </body>
+</html>
