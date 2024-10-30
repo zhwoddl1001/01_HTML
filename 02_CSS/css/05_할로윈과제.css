@@ -1,0 +1,36 @@
+.banner {
+  background-color: #ffa500;
+  padding: 10px;
+  text-align: center;
+}
+.main {
+  border: 2px solid #dddddd;
+  background-color: #fdfdfd;
+  color: #333333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 30px;
+  border-radius: 8px;
+}
+
+.갤러리 {
+  border: 2px solid #dddddd;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+}
+.이미지 img {
+  width: 100px;
+  margin: 20px;
+}
+.이미지 {
+  text-align: center;
+}
+
+.끝배너 {
+  background-color: #ffa500;
+  padding: 10px;
+  text-align: center;
+}
