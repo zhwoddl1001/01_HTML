@@ -11,7 +11,7 @@
 
 let count = 0;
 const result = document.getElementById("result1");
-const input = document.getElementById("input1").value;
+const input = document.getElementById("input1");
 
 function minus() {
   //result = document.getElementById("result1").innerText = 5

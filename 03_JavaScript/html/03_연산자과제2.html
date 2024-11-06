@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/03_연산자과제2.css" />
+  </head>
+  <body>
+    <h1>로그인 & 비밀번호 일치여부 확인</h1>
+    <pre>
+로그인을 진행한다.
+        비밀번호 일치 여부를 확인하고
+        비밀번호에 영문자 대/소문자, 특수문자, 숫자 포함 8~32자 작성한다는 표시가 보이게 설정
+    </pre>
+
+    <div class="container">
+      <div class="form-section">
+        <h1>회원가입</h1>
+        Id : <input type="text" id="inputId" placeholder="아이디 입력" /><br />
+        Pw :
+        <input type="password" id="inputPw" placeholder="비밀번호 입력" /><br />
+        MobilePhone : <input type="text" id="inputMp" /><br />
+        TllPhone : <input type="password" id="inputTp" /><br />
+        <p id="msg" style="display: none">
+          전화번호나 휴대폰 번호를 입력해주세요.
+        </p>
+        <button onclick="회원가입()">회원가입</button>
+      </div>
+      <div class="form-section">
+        <h1>로그인</h1>
+      </div>
+      Id : <input type="text" id="inputId" placeholder="아이디 입력" /><br />
+      Pw :
+      <input type="password" id="inputPw" placeholder="비밀번호 입력" /><br />
+      <button onclick="login()">로그인</button>
+    </div>
+    <script src="../js/03_연산자과제2.js"></script>
+  </body>
+</html>
