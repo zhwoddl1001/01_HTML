@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입출금</title>
+    <style>
+      .account {
+        width: 500px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .row {
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      input {
+        border: 1px solid #ddd;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .입금:hover {
+        background-color: yellowgreen;
+        color: white;
+      }
+      .출금:hover {
+        background-color: orange;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="account">
+      <div class="row">
+        <h2>잔액 : <span id="output">원</span></h2>
+      </div>
+      <div class="row">
+        <!--금액은 입력해야하니까 input넣기 label 에 for 작성 한후 input에 id 작성 같은 값 넣기 -->
+        <label for="amount">금액 <input type="text" id="amount" /></label>
+        <span>원</span>
+      </div>
+      <button onclick="입금버튼()" class="입금">입금</button>
+      <button onclick="출금버튼()" class="출금">출금</button>
+    </div>
+    <script>
+      const output = document.getElementById("output");
+      const amount = document.getElementById("amount");
+      let balance = 10000;
+      output.innerText = balance;
+
+      function 입금버튼() {
+        balance += Number(amount.value);
+        output.innerText = balance;
+        amount.value = "";
+      }
+      function 출금버튼() {
+        balance -= Number(amount.value);
+        output.innerText = balance;
+        amount.value = "";
+      }
+    </script>
+  </body>
+</html>
