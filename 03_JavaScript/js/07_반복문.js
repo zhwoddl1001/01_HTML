@@ -54,3 +54,57 @@ function check4() {
   // 결과2로 c 모든값을 출력
   alert(결과2);
 }
+
+function while1() {
+  let num = 1; //let 변할 수 있는 변수명을 작성 const 는 변할수 없는 상수명을작성
+  while (num <= 5) {
+    alert("num의 숫자값은" + num + "입니다");
+    //계속 num 값이 1이기 때문에 무한 반복
+    //num 숫자를 1씩 증가시켜서 숫자가 5가 되면 while문을 종료하기
+    num++;
+  }
+}
+
+function while2() {
+  let abc = 1;
+  while (abc <= 10) {
+    console.log("======while2의 버튼========");
+    console.log("ABC값은" + abc + "입니다");
+    abc++;
+  }
+}
+
+function while3() {
+  let abc = 1;
+  while (abc <= 10) {
+    console.log("======while3의 버튼========");
+    console.log("ABC값은" + abc + "입니다");
+    abc++;
+
+    if (abc == 5) {
+      break;
+    }
+  }
+}
+//지역변수 안에서만 사용하는 변수명을 설정할 경우 {}안에 변수명을 작성
+// xyz
+function while4() {
+  let xyz = 0;
+  while (xyz <= 20) {
+    xyz++;
+    console.log(xyz);
+  }
+}
+//07_반복문.html 과 js 07_반복문.js 코드에 function while5() 버튼 생성한다.
+//시작숫자를 5로 시작하고 20으로 끝나는 while 조건 작성
+
+function while5() {
+  let start = 5;
+  while (start <= 20) {
+    console.log("숫자는" + start + "입니다.");
+    start++;
+    if (start == 15) {
+      break;
+    }
+  }
+}

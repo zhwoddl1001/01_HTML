@@ -65,9 +65,18 @@
         amount.value = "";
       }
       function 출금버튼() {
-        balance -= Number(amount.value);
-        output.innerText = balance;
-        amount.value = "";
+        const password = prompt("비밀번호를 입력하세요.");
+        if (password == 1234) {
+          if (Number(amount.value) > balance) {
+            alert("출금 금액이 잔액보다 클 수 없습니다.");
+          } else {
+            balance -= Number(amount.value);
+            output.innerText = balance;
+            amount.value = "";
+          }
+        } else {
+          alert("비밀번호가 일치하지않습니다. 다시입력해주세요.");
+        }
       }
     </script>
   </body>
