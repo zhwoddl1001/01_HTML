@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소접근 실습</title>
+    <style>
+      #title {
+        color: blue;
+        text-align: center;
+      }
+
+      .text {
+        color: black;
+        text-align: center;
+      }
+
+      .highlighted {
+        color: red;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: blue;
+      }
+      button {
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">안녕하세요,반가워요!</h1>
+    <button onclick="titColor()">제목 색상 변경</button>
+    <hr />
+    <h2 class="text">텍스트1</h2>
+    <h2 class="text">텍스트2</h2>
+    <h2 class="text">텍스트3</h2>
+    <button onclick="textstrong()">텍스트 강조</button>
+    <hr />
+    <label>이름을 입력하세요.</label>
+    <input type="text" name="username" placeholder="이름" />
+    <button onclick="namecheck()">이름표시</button>
+    <p>당신의 이름:<span id="nameOutput"></span></p>
+    <script>
+      function titColor() {
+        const title = document.getElementById("title");
+        title.style.color = "green";
+      }
+
+      function textstrong() {
+        let abc = document.getElementsByClassName("text");
+
+        abc.style.color = "red";
+      }
+
+      function namecheck() {
+        const result = document.getElementById("nameOutput");
+        const name = document.getElementsByName("username");
+
+        if (name) {
+          let aaa = name.value;
+          result.innerText = `${aaa} 입니다.`;
+        }
+      }
+    </script>
+  </body>
+</html>

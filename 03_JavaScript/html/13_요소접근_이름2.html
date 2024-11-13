@@ -21,6 +21,7 @@
 
     <button onclick="checkHobby()">확인</button>
     <p id="result"></p>
+
     <script>
       function checkHobby() {
         const hobby = document.getElementsByName("hobby");
@@ -31,11 +32,16 @@
           if (hobby[i].checked) {
             str += hobby[i].value + " ";
             count++;
-            result.innerHTML = `${str}<br>선택된 취미개수 : ${count}`;
-          } else {
-            result.innerHTML = "선택한 취미가 없습니다.";
           }
         }
+        //결과 값을 나타내는건 for문 밖에 쓰기
+        if (count > 0) {
+          result.innerHTML = `${str}<br>선택된 취미 개수 : ${count}`;
+        } else {
+          result.innerHTML = "선택한 취미가 없습니다.";
+        }
+
+        console.log(str + "선택된 취미개수:" + count);
       }
     </script>
   </body>

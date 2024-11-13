@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+label {
+  margin: 5px 0;
+}
+
+button {
+  margin: 10px;
+}
+/*
+input에서 특정 이름을 가진 속성에서
+checked로 선택되어 있는 스타일을 가져오는 방법
+input[name="색상"] :checked for 이름으로
+input과 label이 연결되어 있는 값에 색상을 칠해줌
+*/
+/* + 바로뒤 형제 요소 하나랄 선택해서 작성
+형제1
+형제2
+형제3
+
+형제1+ 형제2{
+둘이 오시에 같은 스타일 색상 사용
+}
+*/
+
+input[name="색상"]:checked + label {
+  background-color: yellow;
+}
