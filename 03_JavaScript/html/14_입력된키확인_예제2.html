@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #inputBox {
+        width: 300px;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      #msg {
+        font-size: 20px;
+        color: orange;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>enter 키를 입력했을 때 입력한 값 화면에 보여주기</h1>
+    <p>입력 창에서 Enter 키를 눌러보세요</p>
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="Enter를 눌러보세요"
+      onkeydown="handelKeyDown(event)"
+      onkeyup="handelKeyUp(event)"
+    /><!--무조건 event를 넣어줘야 작동함-->
+
+    <!--Enter를 입력했을 때 메세지가 보여질 공간-->
+    <div id="msg"></div>
+    <script>
+      /*키를 밑으로 눌렀을때 기능*/
+      /*키를 밑으로 누르는 것을 종료했을 때 기능*/
+      function handelKeyDown(event) {
+        console.log(
+          "키가 누르는 것을 개발자가 확인하는 창에서 확인하고 있습니다"
+        );
+      }
+
+      function handelKeyUp(event) {
+        if (event.key === "Enter") {
+          //``(역 따옴표)를 사용해서 문자열 변수명 함께 작성할때 `문자열 ${변수명}`
+          document.getElementById("msg").innerHTML += `안녕하세요<br>`;
+        }
+      }
+    </script>
+  </body>
+</html>
