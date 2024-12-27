@@ -18,7 +18,7 @@ function 약관동의() {
   }
 }
 
-//1. 가입버튼 가입이 완료 되었다는 alert 이후 성공.html 이동하기
+//1. 가입버튼 가입이 완료 되었다는 alert 이후 성공.html 이동하기 (함)
 //2. addEventListener로 변경해서 작성
 function 회원가입동의() {
   const id = document.getElementById("id").value;
@@ -49,4 +49,5 @@ function 회원가입동의() {
     return false;
   }
   alert("회원가입이 완료되었습니다.");
+  window.location.href = "성공.html";
 }
